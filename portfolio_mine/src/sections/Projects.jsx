@@ -24,7 +24,7 @@ const categorizedProjects = {
       description: 'A fully functional Hospital Management System built using Python. This project allows administrators to manage doctors, patients, and hospital operations efficiently.',
       tech: ['Python'],
       url: 'https://github.com/Abkas/Simple-Hospital-Management-System-Python-Based',
-  image: '/random.png',
+  image: '/Hospital.png',
     },
     {
       title: 'Guitar-Vision',
