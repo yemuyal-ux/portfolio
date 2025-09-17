@@ -1,3 +1,17 @@
+/* Exploring particle effect (optional fallback for non-GSAP) */
+.exploring-letter {
+  will-change: transform, opacity, filter;
+}
+/* Exploring disappear animation */
+.exploring-anim {
+  transition: opacity 1.2s cubic-bezier(.4,1.5,.5,1.1), filter 1.2s cubic-bezier(.4,1.5,.5,1.1), transform 1.2s cubic-bezier(.4,1.5,.5,1.1);
+}
+.exploring-gone {
+  opacity: 0;
+  filter: blur(12px) brightness(1.5);
+  transform: translateY(-40px) scale(1.2) rotate(-18deg) skewY(-12deg);
+  pointer-events: none;
+}
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Indie+Flower&family=Permanent+Marker&display=swap');
 /* Break in two effect for skill items */
 .skill-name-split {
