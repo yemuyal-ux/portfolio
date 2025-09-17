@@ -63,13 +63,13 @@ const Projects = () => {
 
   return (
     <section id="projects" className="w-full min-h-screen flex flex-col items-center justify-center bg-white select-none py-20 px-4">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2d1e5e] mb-12 tracking-widest" style={{ fontFamily: '"Press Start 2P", system-ui, sans-serif' }}>PROJECTS</h2>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2d1e5e] mb-12 tracking-widest cartoon-font">PROJECTS</h2>
       <div className="w-full max-w-2xl grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
         {categoryList.map((category) => (
           <button
             key={category}
-            className={`flex flex-col items-center justify-center px-8 py-6 w-full rounded-xl border-2 shadow-pixel font-bold text-base sm:text-lg transition-all duration-300 cursor-pointer focus:outline-none ${selectedCategory === category ? 'bg-[#5e35b1] text-white border-[#5e35b1] scale-105' : 'bg-white text-[#5e35b1] border-[#e0e0e0] hover:bg-[#ede7f6]'}`}
-            style={{ fontFamily: '"Press Start 2P", system-ui, sans-serif', minHeight: '80px', transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)' }}
+            className={`flex flex-col items-center justify-center px-8 py-6 w-full rounded-xl border-2 shadow-pixel font-bold text-base sm:text-lg transition-all duration-300 cursor-pointer focus:outline-none cartoon-font ${selectedCategory === category ? 'bg-[#5e35b1] text-white border-[#5e35b1] scale-105' : 'bg-white text-[#5e35b1] border-[#e0e0e0] hover:bg-[#ede7f6]'}`}
+            style={{ minHeight: '80px', transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)' }}
             onClick={() => setSelectedCategory(selectedCategory === category ? null : category)}
           >
             {category}
@@ -82,12 +82,12 @@ const Projects = () => {
       >
         {selectedCategory && (
           <>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#5e35b1] mb-6 tracking-wider" style={{ fontFamily: 'inherit', transition: 'all 0.5s cubic-bezier(0.4,0,0.2,1)' }}>{selectedCategory}</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#5e35b1] mb-6 tracking-wider cartoon-font" style={{ transition: 'all 0.5s cubic-bezier(0.4,0,0.2,1)' }}>{selectedCategory}</h3>
             {categorizedProjects[selectedCategory].length === 0 ? (
               <p className="text-[#888] italic mb-8">No projects yet in this category.</p>
             ) : (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full transition-all duration-500">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 w-full transition-all duration-500">
                   {(showAll ? categorizedProjects[selectedCategory] : categorizedProjects[selectedCategory].slice(0, 3)).map((project, idx) => (
                     <ProjectCard key={project.title + idx} {...project} />
                   ))}

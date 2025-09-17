@@ -28,19 +28,19 @@ const ProjectCard = ({ title, description, tech, url, image, livePreview, label,
     : "inline-block px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition-colors text-xs font-bold";
   return (
     <>
-      <div className={cardClass} style={{ fontFamily: '"Press Start 2P", system-ui, sans-serif', background: '#fff' }}>
+  <div className={cardClass + ' cartoon-font'} style={{ background: '#fff' }}>
         {imgSrc && (
           <img src={imgSrc} alt={title + ' screenshot'} className={imgClass} />
         )}
         <div className="flex items-center gap-2 mb-1">
-          <h3 className={titleClass}>{title}</h3>
+          <h3 className={titleClass + ' cartoon-font'}>{title}</h3>
           {label === 'ongoing' && (
-            <span className="ml-2 px-2 py-1 bg-yellow-300 text-yellow-900 rounded text-xs font-bold" style={{ fontFamily: 'inherit' }}>Ongoing</span>
+            <span className="ml-2 px-2 py-1 bg-yellow-300 text-yellow-900 rounded text-xs font-bold cartoon-font">Ongoing</span>
           )}
         </div>
-        <p className={small
+        <p className={(small
           ? "text-xs text-[#444] mb-1"
-          : "text-sm text-[#444] mb-2"}>{description}</p>
+          : "text-sm text-[#444] mb-2") + ' cartoon-font font-normal'} style={{ fontWeight: 300 }}>{description}</p>
         <div className={techClass}>
           {tech.map((item, idx) => {
             // Map tech name to logo (SVG or PNG in public folder)
@@ -63,7 +63,7 @@ const ProjectCard = ({ title, description, tech, url, image, livePreview, label,
           };
           const logo = techLogos[item] || null;
           return (
-            <span key={idx} className="flex items-center gap-1 bg-[#ede7f6] text-[#5e35b1] px-2 py-1 rounded text-xs font-bold" style={{ fontFamily: 'inherit' }}>
+            <span key={idx} className="flex items-center gap-1 bg-[#ede7f6] text-[#5e35b1] px-2 py-1 rounded text-xs font-normal cartoon-font" style={{ fontWeight: 300 }}>
               {logo && <img src={logo} alt={item + ' logo'} className="w-4 h-4 mr-1 inline-block" />}
               {item}
             </span>
@@ -71,11 +71,11 @@ const ProjectCard = ({ title, description, tech, url, image, livePreview, label,
         })}
       </div>
         <div className="flex gap-2 mt-auto">
-          <a href={url} target="_blank" rel="noopener noreferrer" className={btnClass} style={{ fontFamily: 'inherit' }}>
+          <a href={url} target="_blank" rel="noopener noreferrer" className={btnClass + ' cartoon-font'}>
             Find out more
           </a>
           {livePreview && (
-            <a href={livePreview} target="_blank" rel="noopener noreferrer" className={liveBtnClass} style={{ fontFamily: 'inherit' }}>
+            <a href={livePreview} target="_blank" rel="noopener noreferrer" className={liveBtnClass + ' cartoon-font'}>
               Live Preview
             </a>
           )}
