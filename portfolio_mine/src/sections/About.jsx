@@ -51,7 +51,7 @@ const About = () => {
             About Me
           </div>
           <div>
-            Hi! I'm <span style={{ fontWeight: 700 }}>Yemuyal</span> — an AI student who loves development and turning ideas into reality.<br /><br />
+            Hi! I'm <span style={{ fontWeight: 700 }}>Abhishek</span> — an AI student who loves development and turning ideas into reality.<br /><br />
             I enjoy making my projects playful, creative, and fun. Whether it's web, code, or design, I like to bring a spark of imagination to everything I do.<br /><br />
             <span style={{ fontWeight: 700 }}>Let's build cool things together!</span>
           </div>
