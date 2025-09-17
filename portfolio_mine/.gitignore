@@ -19,6 +19,35 @@ dist-ssr
 .DS_Store
 *.suo
 *.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+dist-ssr/
+
+# Env files
+.env
+.env.*
+
+# Coverage
+coverage/
+
+# Misc
+*.local
+*.cache
+*.tgz
+
+# OS
+Thumbs.db
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.npm/
+.cache/
+.eslintcache
