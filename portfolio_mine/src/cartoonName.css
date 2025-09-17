@@ -1,3 +1,13 @@
+/* Exploding particle effect (optional fallback for non-GSAP) */
+.exploding-letter {
+  will-change: transform, opacity, filter;
+}
+.ash-remnant {
+  user-select: none;
+  pointer-events: none;
+  font-style: italic;
+  text-shadow: 0 2px 8px #888, 0 0 12px #fff;
+}
 /* Exploring particle effect (optional fallback for non-GSAP) */
 .exploring-letter {
   will-change: transform, opacity, filter;
