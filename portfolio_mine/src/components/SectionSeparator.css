@@ -1,0 +1,26 @@
+
+
+.section-separator {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.section-separator svg {
+  display: block;
+  background: #fff !important;
+}
+
+
+
+
+@keyframes wiggle {
+  0% { transform: rotate(-2deg) scaleY(1.05); }
+  20% { transform: rotate(2deg) scaleY(0.97); }
+  40% { transform: rotate(-3deg) scaleY(1.08); }
+  60% { transform: rotate(3deg) scaleY(0.95); }
+  80% { transform: rotate(-2deg) scaleY(1.03); }
+  100% { transform: rotate(2deg) scaleY(1.00); }
+}

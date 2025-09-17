@@ -1,0 +1,86 @@
+/* Highlight for About section important phrases */
+.about-highlight {
+  color: #ff0080;
+  background: #fffbe7;
+  padding: 0 0.18em;
+  border-radius: 0.3em;
+  font-weight: bold;
+  box-shadow: 0 2px 0 #ffe082;
+  font-family: 'Luckiest Guy', cursive, system-ui, sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+.funky-top {
+  font-family: 'Indie Flower', cursive, system-ui, sans-serif;
+  transition: transform 0.25s cubic-bezier(.25,1.5,.5,1.1), color 0.2s;
+  cursor: pointer;
+}
+.funky-top:hover {
+  color: #ff0080;
+  transform: rotate(-7deg) scale(1.18) skewY(-4deg);
+  text-shadow: 0 2px 12px #ffb5e2, 0 0 0 #fff;
+}
+
+
+.funky-bottom {
+  font-family: 'Permanent Marker', cursive, system-ui, sans-serif;
+  transition: transform 0.25s cubic-bezier(.25,1.5,.5,1.1), color 0.2s;
+  cursor: pointer;
+}
+.funky-bottom:hover {
+  color: #ff9800;
+  animation: funky-bounce 0.5s cubic-bezier(.25,1.5,.5,1.1);
+  text-shadow: 0 4px 16px #ffd180, 0 0 0 #fff;
+}
+
+
+@keyframes funky-bounce {
+  0% { transform: scale(1) translateY(0); }
+  30% { transform: scale(1.18,0.92) translateY(-6px); }
+  60% { transform: scale(0.95,1.08) translateY(2px); }
+  100% { transform: scale(1) translateY(0); }
+}
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.cartoon-font {
+  font-family: 'Luckiest Guy', cursive, system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  transition: font-variation-settings 0.2s;
+}
+
+.cartoon-name {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.1em;
+}
+
+.cartoon-char {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(.25,1.5,.5,1.1), color 0.2s;
+  cursor: pointer;
+  will-change: transform;
+}
+
+
+.cartoon-char:hover {
+  transform: scale(2.2, 1.5) rotate(-7deg);
+  color: #7c3aed;
+  text-shadow: 0 2px 12px #c4b5fd, 0 0 0 #fff;
+  z-index: 2;
+}
+
+.cartoon-char:not(:hover) {
+  transition: transform 0.25s cubic-bezier(.25,1.5,.5,1.1), color 0.2s;
+}
+
+.cartoon-char:active {
+  transform: scale(1.2, 0.8) rotate(2deg);
+  color: #2d1e5e;
+}
+
+.cartoon-char.squished {
+  transform: scale(0.7, 0.8) skewY(-8deg);
+  color: #888;
+  filter: brightness(0.85);
+}
